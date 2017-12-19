@@ -10,7 +10,11 @@ class IndexController extends Controller{
 
 
     public function index(){
-        $NavProductClssifys = Pclassify::get();
-        return view('home.pages.index',['title_item' => 'Index','nav_product_clssifys' => $NavProductClssifys]);
+        return view('home.pages.index',['title_item' => 'Index']);
+    }
+
+    public function nav_pro_class(){
+        $res = Pclassify::get();
+        return $res;
     }
 }

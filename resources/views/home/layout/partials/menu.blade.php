@@ -11,8 +11,8 @@
                     <li>
                         <a href="{{route('product')}}" {{Request::getSchemeAndHttpHost().Request::getPathinfo() == route('product') ? 'id=visited' : ''}}>Product</a>
                         <ul class="z_menu">
-                            @foreach($nav_product_clssifys as $pro_class)
-                            <li><a href="{{route('product',['class_key' => $pro_class->id])}}">{{$pro_class->pro_class_name}}</a></li>
+                            @foreach($pro_classifys as $pl)
+                                <li><a href="{{route('product',['class_key' => $pl->id])}}">{{$pl->pro_class_name}}</a></li>
                             @endforeach
                         </ul>
                     </li>
