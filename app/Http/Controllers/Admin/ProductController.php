@@ -28,7 +28,7 @@ class ProductController extends Controller
             $data['data'][$k]['product_param'] = $v->product_param;
             $data['data'][$k]['created_at'] = $v->created_at->format('Y-m-d H:i:s');
             $data['data'][$k]['updated_at'] = $v->updated_at->format('Y-m-d H:i:s');
-            $data['data'][$k]['product_classify'] = $v->pclass->pro_class_name;
+            $data['data'][$k]['product_classify'] = $v->pclass['pro_class_name'];
         }
         $data['code'] = 0;
         $data['msg'] = '';
