@@ -74,8 +74,8 @@
                 }
                 ,error: function(index, upload){
                     //请求异常回调
-//                    console.log('error:file_index',index);
-//                    console.log('error:file_upload',upload);
+                    console.log('error:file_index',index);
+                    console.log('error:file_upload',upload);
                 }
             });
         });

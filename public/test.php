@@ -1,4 +1,4 @@
 <?php
 
-echo waibao1;
+echo 'www.iecol.com';
 phpinfo();

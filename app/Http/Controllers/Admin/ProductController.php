@@ -96,18 +96,13 @@ class ProductController extends Controller
             return response($data, 200)
                 ->header('Content-Type', 'text/html');
         }else{
-//            $files_data['data'] =
+
             if($request->file()){
-//                foreach($request->file() as $k => $v){
-//                    $data['key'] =  $k;
-//                    $data['val'] = $v;
-//                }
                 $file_path = Storage::put('public/layedit_images',$request->file('file'));
                 $count = strpos($file_path,"public/");
                 $pic_path = substr_replace($file_path,"storage/",$count,7);
                 $files_data['msg'] = '成功';
                 $files_data['code'] = 0;
-//                $files_data['data']['src'] = $pic_path;
                 $files_data['data']['src'] = url($pic_path);
                 $files_data['data']['title'] = 'test';
                 return response($files_data, 200)

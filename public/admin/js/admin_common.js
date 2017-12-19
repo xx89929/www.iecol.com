@@ -120,7 +120,7 @@ layui.use(['element','laydate','layer','jquery','layedit','form','table','laytpl
 
     layedit.set({
         uploadImage: {
-            url: 'http://www.waibao1.com.cn/admin/product/put_files'
+            url: 'http://'+window.location.host+'/admin/product/put_files'
             ,type: 'post' //默认post
         }
     });
