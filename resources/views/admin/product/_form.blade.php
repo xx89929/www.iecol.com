@@ -18,11 +18,18 @@
         <label class="layui-form-label">选择框</label>
         <div class="layui-input-block">
             <select name="product[product_classify]" lay-verify="required">
-                <option value="0" {{isset($edit->product_classify) && $edit->product_classify == 0 ? 'selected' :old('product')['product_classify']}}>Led Spot Lamp & Down Lamp  (led射灯筒灯)</option>
-                <option value="1" {{isset($edit->product_classify) && $edit->product_classify == 1 ? 'selected' :old('product')['product_classify']}}>Led Bulb\Led Candle bulb (LED球泡/蜡烛灯)</option>
-                <option value="2" {{isset($edit->product_classify) && $edit->product_classify == 2 ? 'selected' :old('product')['product_classify']}}>T5, T8  & fixture（T5,T8与支架）</option>
-                <option value="3" {{isset($edit->product_classify) && $edit->product_classify == 3 ? 'selected' :old('product')['product_classify']}}>Led Flat Pannel（LED平板灯）</option>
-                <option value="4" {{isset($edit->product_classify) && $edit->product_classify == 4 ? 'selected' :old('product')['product_classify']}}>Led Wall Washing Lamp（LED洗墙灯）</option>
+                @foreach ($pro_class_list as $class_list)
+                    <option value="{{$class_list->id}}" {{isset($edit->product_classify) && $edit->product_classify == $class_list->id ? 'selected' :old('product')['product_classify']}}>{{$class_list->pro_class_name}}</option>
+                @endforeach
+
+
+
+
+                {{--<option value="0" {{isset($edit->product_classify) && $edit->product_classify == 0 ? 'selected' :old('product')['product_classify']}}>Led Spot Lamp & Down Lamp  (led射灯筒灯)</option>--}}
+                {{--<option value="1" {{isset($edit->product_classify) && $edit->product_classify == 1 ? 'selected' :old('product')['product_classify']}}>Led Bulb\Led Candle bulb (LED球泡/蜡烛灯)</option>--}}
+                {{--<option value="2" {{isset($edit->product_classify) && $edit->product_classify == 2 ? 'selected' :old('product')['product_classify']}}>T5, T8  & fixture（T5,T8与支架）</option>--}}
+                {{--<option value="3" {{isset($edit->product_classify) && $edit->product_classify == 3 ? 'selected' :old('product')['product_classify']}}>Led Flat Pannel（LED平板灯）</option>--}}
+                {{--<option value="4" {{isset($edit->product_classify) && $edit->product_classify == 4 ? 'selected' :old('product')['product_classify']}}>Led Wall Washing Lamp（LED洗墙灯）</option>--}}
             </select>
         </div>
     </div>
@@ -85,7 +92,6 @@
         <div class="layui-input-block">
             <button id="submit_form" class="layui-btn" lay-submit lay-filter="formDemo">立即提交</button>
             <button type="reset" class="layui-btn layui-btn-primary">重置</button>
-            <button id="test" class="layui-btn layui-btn-primary">TEST</button>
         </div>
     </div>
 </form>

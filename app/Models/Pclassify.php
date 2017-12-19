@@ -8,5 +8,5 @@ class Pclassify extends Model
 {
     protected $table = "de1_product_classify";
 
-    protected $dateFormat = false;
+    public $timestamps  = false;
 }

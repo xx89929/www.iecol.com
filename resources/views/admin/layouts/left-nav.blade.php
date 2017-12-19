@@ -5,7 +5,13 @@
             <li class="layui-nav-item">
                 <a class="" href="javascript:;">产品管理</a>
                 <dl class="layui-nav-child">
-                    <dd class="{{Request::getSchemeAndHttpHost().Request::getPathinfo() == route('admin_product') ? 'layui-this' : ''}}"><a href="{{route('admin_product')}}">产品列表</a></dd>
+                    <dd class="{{Request::getSchemeAndHttpHost().Request::getPathinfo() == route('admin_product') ? 'layui-this' : ''}}">
+                        <a href="{{route('admin_product')}}">产品列表</a>
+                    </dd>
+
+                    <dd class="{{Request::getSchemeAndHttpHost().Request::getPathinfo() == route('pro_class') ? 'layui-this' : ''}}">
+                        <a href="{{route('pro_class')}}">产品分类</a>
+                    </dd>
                 </dl>
             </li>
             <li class="layui-nav-item">

@@ -43,7 +43,7 @@ layui.use(['element','laydate','layer','jquery','layedit','form','table','laytpl
                 type:"Post",
                 dataType:"json",
                 success:function(data){
-                    // console.log("success",data);
+                    console.log("success",data);
                     layer.msg(data.msg, {
                         icon: 1,
                         time: 1000 //2秒关闭（如果不配置，默认是3秒）
@@ -53,7 +53,7 @@ layui.use(['element','laydate','layer','jquery','layedit','form','table','laytpl
                     })
                 },
                 error:function(data){
-                    // console.log("error",data);
+                    console.log("error",data);
                     layer.msg(data.msg, {
                         icon: 2,
                         time: 1000 //2秒关闭（如果不配置，默认是3秒）

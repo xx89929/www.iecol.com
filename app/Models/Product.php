@@ -11,7 +11,7 @@ class Product extends Model
     protected $dateFormat = "U";
 
     public function pclass(){
-        return $this->hasOne('App\Models\Pclassify','p_class_id','product_classify');
+        return $this->hasOne('App\Models\Pclassify','id','product_classify');
     }
 
 }
