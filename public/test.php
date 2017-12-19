@@ -1,4 +1,4 @@
 <?php
 
-echo 'www.iecol.com';
+echo 'www.git.com';
 phpinfo();
