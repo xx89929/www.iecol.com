@@ -11,11 +11,9 @@
                     <li>
                         <a href="{{route('product')}}" {{Request::getSchemeAndHttpHost().Request::getPathinfo() == route('product') ? 'id=visited' : ''}}>Product</a>
                         <ul class="z_menu">
-                            <li><a href="{{route('product',['class_key' => '0'])}}">Led Spot Lamp & Down Lamp  (led射灯筒灯)</a></li>
-                            <li><a href="{{route('product',['class_key' => '1'])}}">Led Bulb\Led Candle bulb (LED球泡/蜡烛灯)</a></li>
-                            <li><a href="{{route('product',['class_key' => '2'])}}">T5, T8  & fixture（T5,T8与支架）</a></li>
-                            <li><a href="{{route('product',['class_key' => '3'])}}">Led Flat Pannel（LED平板灯）</a></li>
-                            <li><a href="{{route('product',['class_key' => '4'])}}">Led Wall Washing Lamp（LED洗墙灯）</a></li>
+                            @foreach($nav_product_clssifys as $pro_class)
+                            <li><a href="{{route('product',['class_key' => $pro_class->id])}}">{{$pro_class->pro_class_name}}</a></li>
+                            @endforeach
                         </ul>
                     </li>
                     <li><a href="{{route('contact')}}" {{Request::getSchemeAndHttpHost().Request::getPathinfo() == route('contact') ? 'id=visited' : ''}}>Contact</a></li>

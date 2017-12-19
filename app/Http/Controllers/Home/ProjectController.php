@@ -4,12 +4,14 @@ namespace App\Http\Controllers\Home;
 
 
 use App\Http\Controllers\Controller;
+use App\Models\Pclassify;
 use App\Models\Product;
 use Illuminate\Http\Request;
 
 class ProjectController extends Controller{
 
     public function index(Request $request){
+        $NavProductClssifys = Pclassify::get();
         if($request->has('id')) {
             $id = $request->input('id');
             $res = Product::with('pclass')->find($id);
@@ -21,7 +23,7 @@ class ProjectController extends Controller{
 //                $data[$k]['image'] = $v->pic_path;
 //            }
 //            dd($data);exit;
-            return view('home.pages.project', ['title_item' => 'Project','vo' => $res]);
+            return view('home.pages.project', ['title_item' => 'Project','vo' => $res,'nav_product_clssifys' => $NavProductClssifys]);
         }
         echo 333;exit;
     }
