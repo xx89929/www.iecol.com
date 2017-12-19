@@ -110,7 +110,6 @@ figure{
     margin: 0px 1% 5% 1%;
     float:left;
     transition: all 0.2s;
-    border-radius: 5px;
     overflow: hidden;
     border: 1px solid rgba(240, 222, 200, 0.8);
 }
@@ -120,6 +119,7 @@ figure{
 
 .product_box_item a{
     display: block;
+    height: 200px;
 }
 .product_box_item_img {
     width: 100%;
@@ -131,23 +131,29 @@ figure{
 }
 
 .product_box_item_tit{
-    padding:10px 0px;
+    background-color: #2d2215;
+    opacity: 0.9;
+    padding-top:100px;
     display: block;
     margin: 0px auto;
     text-align: center;
     width: 100%;
-    color: rgba(240, 222, 200, 0.8);
+    transition: all 0.2s;
+    height: 200px;
+}
+.product_box_item_tit_active{
+    margin-top: -200px;
 }
 .product_box_item_tit span{
     width:100%;
 }
 .product_box_item_tit > .en >span{
     font-size: 20px;
-    color: #543d1f;
+    color: #fbe6cb;
 }
 .product_box_item_tit > .ch >span{
     font-size: 15px;
-    color: #543d1f;
+    color: #fbe6cb;
 }
 
 
@@ -159,7 +165,7 @@ figure{
 }
 
 .prj_contact_button{
-    margin-top: 80px;
+    margin-top: 30px;
 }
 
 .prj_contact_button button{
@@ -169,7 +175,14 @@ figure{
     transition: all 0.2s;
     background-color: #f07272;
     border: 0px;
-    padding:10px 30px;
+    padding: 15px 50px;
+    display: block;
+    margin: 0px auto;
+}
+.sku-cutline{
+    margin-top: 27px;
+    margin-bottom: 18px;
+    border-style: dashed;
 }
 
 .prj_contact_button button:hover{
@@ -181,44 +194,64 @@ figure{
     margin-top:40px;
     background-color: white;
     box-shadow: 0px 0px 10px #e0e0e0;
-    width: 100%;
+    width: 920px;
     border: 1px solid #e0e0e0;
     display: inline-block;
-    padding: 40px 0px;
+    padding: 20px;
 }
 
 .prj_image{
-    border-right:  1px solid rgba(233, 233, 233, 0.87);
-    padding-right: 30px;
+    width: 47%;
     height: 100%;
     float:left;
-    margin-left: 30px;
 }
 
 .prj_image img{
-    width: 278px;
-    height:278px;
+    width: 100%;
+    height: 350px;
 }
 .prj_des{
-    width: 581px;
-    float:left;
-    padding:20px;
+    width: 50%;
+    float:right;
 }
 .prj_tit{
-    height: 100px;
+    word-break: break-all;
+    display: inline-block;
+    max-height: 110px;
+    overflow: hidden;
 }
-.prj_tit > span {
+.prj_tit > h2 {
     color: #261b0d;
-    font-weight: bold;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 40px;
+}
+.prj_tit > h3 {
     font-size: 22px;
-}
-.prj_tit > i {
-    color: #261b0d;
+    color: #666;
+    line-height: 28px;
+    position: relative;
+    top: -33px;
+    font-weight: 300;
+    margin-bottom: 0px;
 }
 
+.prj_classify{
+    background-color: #f8f8f8;
+    padding: 20px;
+}
 .prj_classify span{
     font-size: 18px;
 }
+
+.prj_footer_top span{
+    font-size: 16px;
+}
+.prj_footer_top p{
+    margin-top: 10px;
+    color: #999;
+}
+
 
 .prj_bottom_box{
     margin: 40px 0px;

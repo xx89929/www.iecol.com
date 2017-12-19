@@ -24,21 +24,26 @@
         </div>
         <div class="prj_des">
           <div class="prj_tit">
-            <span>{{$vo->product_en_name}}</span>
-            <i>{{$vo->product_ch_name}}</i>
+            <h2>{{$vo->product_en_name}}</h2><br>
+            <h3>{{$vo->product_ch_name}}</h3>
           </div>
           <div class="prj_classify">
-            <span>Type：{{$vo->pclass->p_class_name}}</span>
+            <span>Type：{{$vo->pclass->pro_class_name}}</span>
           </div>
           <div class="prj_contact_button">
             <button>联系我们</button>
+          </div>
+          <hr class="sku-cutline">
+          <div class="prj_footer_top">
+            <span>——在线服务Online Service：</span>
+            <p>Skype: <a href="#">iecol- </a> 微信：<a href="#">18938746984</a> QQ: <a href="#">1452986876</a></p>
           </div>
         </div>
       </div>
 
       <div class="prj_bottom_box">
         <div class="prj_param_tag">
-          <span>Product Param</span>
+          <span>Product Param(参数)</span>
         </div>
         <div class="prj_param_box">
           <div class="prj_param">

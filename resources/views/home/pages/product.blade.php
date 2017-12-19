@@ -25,7 +25,7 @@
             <div class="product_box_item_img">
               <img src="{{url($vo->pic_path)}}" alt="{{$vo->product_en_name}}" />
             </div>
-            <div class="product_box_item_tit" style="background: #dbcab6 url('{{url("home/images/bg/caption2.png")}}') repeat">
+            <div class="product_box_item_tit">
               <div class="en"><span>{{$vo->product_en_name}}</span></div>
               <div class="ch"><span>{{$vo->product_ch_name}}</span></div>
             </div>
@@ -42,6 +42,14 @@
     @endif
   </div>
 </div>
+
+<script>
+  $('.product_box_item').hover(function () {
+      $(this).find('.product_box_item_tit').addClass('product_box_item_tit_active');
+  },function () {
+      $(this).find('.product_box_item_tit').removeClass('product_box_item_tit_active');
+  })
+</script>
 
 <div class="socialsblock">
   <div class="container socialize">
