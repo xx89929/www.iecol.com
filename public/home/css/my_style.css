@@ -299,7 +299,7 @@ figure{
 
 .act_bottom{
     margin-top: 20px;
-    border: 1px solid #dddddd;
+    /*border: 1px solid #dddddd;*/
     width: 640px;
     background-color: white;
 }
@@ -311,6 +311,10 @@ figure{
 }
 .update_times{
     margin-top: 10px;
+}
+.update_times span{
+    font-size: 14px;
+    color: #747474;
 }
 
 .act_content{
