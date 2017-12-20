@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class ActiveController extends Controller{
 
     public function index(Request $request){
-        $active_list = Actives::orderBy('id','desc')->select('id','act_title')->take(10)->get();
+        $active_list = Actives::orderBy('id','desc')->select('id','act_title')->take(20)->get();
         $id = Actives::max('id');
         if($request->input('act_id')){
             $id = $request->input('act_id');

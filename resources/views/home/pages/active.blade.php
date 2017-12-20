@@ -27,7 +27,7 @@
         </div>
         <div class="act_bottom">
           <div class="act_content">
-            {!! $act_info->act_content !!}}
+            {!! $act_info->act_content !!}
           </div>
         </div>
       </div>
