@@ -18,7 +18,7 @@
 
 Route::group(['namespace' => 'Home'],function(){
     Route::get('','IndexController@index')->name('/');
-    Route::get('about','AboutController@index')->name('about');
+    Route::get('active','ActiveController@index')->name('active');
     Route::get('product','ProductController@index')->name('product');
     Route::get('contact','ContactController@index')->name('contact');
     Route::get('project','ProjectController@index')->name('project');
@@ -57,4 +57,12 @@ Route::group(['prefix' => 'admin','namespace' => 'Admin'], function () {
     Route::match(['post','get'],'product/classify/create','ProClassifyController@create')->name('product_classify_create');
     Route::match(['post','get'],'product/classify/update/{id?}','ProClassifyController@update')->name('product_classify_update');
     Route::get('product/classify/del/{id?}','ProClassifyController@del')->name('product_classify_del');
+
+
+    /********active****/
+    Route::get('active/manage','ActiveController@index')->name('active_manage');
+    Route::get('active/get_active','ActiveController@get_active')->name('get_active');
+    Route::match(['post','get'],'active/create','ActiveController@create')->name('active_create');
+    Route::match(['post','get'],'active/update/{id?}','ActiveController@update')->name('active_update');
+    Route::get('active/del/{id?}','ActiveController@del')->name('active_del');
 });

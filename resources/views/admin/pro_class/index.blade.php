@@ -39,8 +39,8 @@
                         ,cols: [[
                             {checkbox: true}
                             ,{field: 'id', title: 'ID', width: 50}
-                            ,{field: 'pro_class_name', title: '产品分类名称', width: 300}
-                            ,{field: 'is_display', title: '是否显示', width: 200}
+                            ,{field: 'pro_class_name', title: '产品分类名称', width: 500}
+                            ,{field: 'is_display', title: '是否显示', width: 100}
                             ,{fixed: 'right', width:150, align:'center', toolbar: '#table_edit'}
                         ]] //设置表头
                         ,done: function(res, curr, count){

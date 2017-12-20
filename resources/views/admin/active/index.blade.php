@@ -19,30 +19,27 @@
     </form>
 
     <div class="layui-row">
-        <button class="layui-btn layui-btn-danger" id="del_btn" url="{{route('product_del')}}"><i class="layui-icon">&#xe640;</i>批量删除</button>
-        <button class="layui-btn layui-btn-normal" id="add_btn" url="{{route('product_create')}}"><i class="layui-icon">&#xe654;</i>添加</button>
+        <button class="layui-btn layui-btn-danger" id="del_btn" url="{{route('active_del')}}"><i class="layui-icon">&#xe640;</i>批量删除</button>
+        <button class="layui-btn layui-btn-normal" id="add_btn" url="{{route('active_create')}}"><i class="layui-icon">&#xe654;</i>添加</button>
     </div>
 
     <div class="layui-row">
-        <table class="layui-table" id="product_list" url="{{route("get_product")}}" lay-filter="item_list">
+        <table class="layui-table" id="active_list" url="{{route("get_active")}}" lay-filter="item_list">
             <script>
                 layui.use(['table','jquery'], function(){
                     var table = layui.table
                         ,$ = layui.jquery
                     table.render({
-                        elem: '#product_list' //指定原始表格元素选择器（推荐id选择器）
-                        ,id: 'product_list'
+                        elem: '#active_list' //指定原始表格元素选择器（推荐id选择器）
+                        ,id: 'active_list'
                         ,even: true //开启隔行背景
-                        ,url: $('#product_list').attr('url')
+                        ,url: $('#active_list').attr('url')
                         ,height: 470 //容器高度
                         ,request: {}
                         ,cols: [[
                             {checkbox: true}
                             ,{field: 'id', title: 'ID', width: 50}
-                            ,{field: 'product_en_name', title: '产品英文名称', width: 300}
-                            ,{field: 'product_ch_name', title: '产品中文名称', width: 200}
-                            ,{field: 'product_classify', title: '产品分类', width: 400}
-                            ,{field: 'product_param', title: '产品参数', width: 200}
+                            ,{field: 'act_title', title: '活动标题', width: 500}
                             ,{field: 'created_at', title: '创建时间', width: 200}
                             ,{field: 'updated_at', title: '更新时间', width: 200}
                             ,{fixed: 'right', width:150, align:'center', toolbar: '#table_edit'}
@@ -70,8 +67,8 @@
     </div>
 
     <script type="text/html" id="table_edit">
-        <a class="layui-btn layui-btn-mini"  lay-event="edit" url="{{route('product_update')}}" this-id="@{{d.id}}"><i class="layui-icon">&#xe642;</i></a>
-        <a class="layui-btn layui-btn-danger layui-btn-mini" lay-event="del" url="{{route('product_del')}}" this-id="@{{d.id}}"><i class="layui-icon">&#xe640;</i></a>
+        <a class="layui-btn layui-btn-mini"  lay-event="edit" url="{{route('active_update')}}" this-id="@{{d.id}}"><i class="layui-icon">&#xe642;</i></a>
+        <a class="layui-btn layui-btn-danger layui-btn-mini" lay-event="del" url="{{route('active_del')}}" this-id="@{{d.id}}"><i class="layui-icon">&#xe640;</i></a>
     </script>
 
     <script type="text/html" id="create_timestamp_to_date">

@@ -7,7 +7,7 @@
             <div id="mainmenu">
                 <ul class="sf-menu">
                     <li><a href="{{route('/')}}" {{Request::getSchemeAndHttpHost().Request::getPathinfo() == route('/').'/' ? 'id=visited' : ''}}>Home</a></li>
-                    <li><a href="{{route('about')}}" {{Request::getSchemeAndHttpHost().Request::getPathinfo() == route('about') ? 'id=visited' : ''}}>About</a></li>
+                    <li><a href="{{route('active')}}" {{Request::getSchemeAndHttpHost().Request::getPathinfo() == route('active') ? 'id=visited' : ''}}>active</a></li>
                     <li>
                         <a href="{{route('product')}}" {{Request::getSchemeAndHttpHost().Request::getPathinfo() == route('product') ? 'id=visited' : ''}}>Product</a>
                         <ul class="z_menu">
@@ -37,7 +37,7 @@
                 <select>
                     <option value="">Navigation</option>
                     <option value="{{route('/')}}">Home</option>
-                    <option value="{{route('about')}}">About</option>
+                    <option value="{{route('active')}}">Active</option>
                     <option value="{{route('product')}}">Product</option>
                     <option value="{{route('contact')}}">Contact</option>
                 </select>

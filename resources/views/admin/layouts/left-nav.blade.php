@@ -3,7 +3,7 @@
         <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
         <ul class="layui-nav layui-nav-tree"  lay-filter="tree_nav">
             <li class="layui-nav-item">
-                <a class="" href="javascript:;">产品管理</a>
+                <a href="javascript:;">产品管理</a>
                 <dl class="layui-nav-child">
                     <dd class="{{Request::getSchemeAndHttpHost().Request::getPathinfo() == route('admin_product') ? 'layui-this' : ''}}">
                         <a href="{{route('admin_product')}}">产品列表</a>
@@ -11,6 +11,14 @@
 
                     <dd class="{{Request::getSchemeAndHttpHost().Request::getPathinfo() == route('pro_class') ? 'layui-this' : ''}}">
                         <a href="{{route('pro_class')}}">产品分类</a>
+                    </dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item">
+                <a href="javascript:;">活动管理</a>
+                <dl class="layui-nav-child">
+                    <dd class="{{Request::getSchemeAndHttpHost().Request::getPathinfo() == route('active_manage') ? 'layui-this' : ''}}">
+                        <a href="{{route('active_manage')}}">活动列表</a>
                     </dd>
                 </dl>
             </li>

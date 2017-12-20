@@ -278,3 +278,69 @@ figure{
     overflow: hidden;
     padding:40px 0px;
 }
+
+/*************Active**********/
+.resume{
+    width: 960px;
+    display: inline-block;
+    min-height:560px;
+}
+#resume{
+    background-color: #f7f7f7;
+}
+.act_top{
+    padding:20px 0px;
+    width: 640px;
+    border: 1px solid #dddddd;
+    box-shadow: 0 0 5px #ddd;
+    text-align:center;
+    background-color: white;
+}
+
+.act_bottom{
+    margin-top: 20px;
+    border: 1px solid #dddddd;
+    width: 640px;
+    background-color: white;
+}
+
+.act_tit span{
+    font-size:22px;
+    color: #1d1b18;
+    font-weight: 400;
+}
+.update_times{
+    margin-top: 10px;
+}
+
+.act_content{
+    padding:20px;
+}
+
+.act_left_side{
+    float: left;
+    margin-top: 40px;
+}
+.act_right_side{
+    background-color: white;
+    margin-top: 40px;
+    float: left;
+    margin-left: 15px;
+    border: 1px solid #dddddd;
+    width: 301px;
+}
+
+.act_ul{
+    padding:20px;
+}
+.act_ul ul li{
+    margin-top: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.act_ul ul li:first-child{
+    margin-top: 0px;
+}
+.act_ul ul li a:hover{
+    text-decoration: underline;
+}
